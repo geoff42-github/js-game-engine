@@ -3,7 +3,7 @@
 /**
  * @class Animated Sprite
  */
-    export class Sprite {
+export class Sprite {
 
     /**
      * @param {string} fileName - Path and name of image file to load
@@ -54,7 +54,7 @@
 
     /**
      * @public
-     * @params {number} - Index of the new animation
+     * @param {number} animIndex - Index of the new animation
      */
      set anim(animIndex) {
         this.curFrame = 0;

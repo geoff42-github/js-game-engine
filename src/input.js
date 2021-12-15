@@ -165,7 +165,7 @@ class InputSystem {
 
     /**
      * @public
-     * @returns {boolen} - True if the left mouse button is currently pressed
+     * @returns {boolean} - True if the left mouse button is currently pressed
      */
     get isMouseLeftPressed() {
         return this.isMousePressed("mouseLeft");
@@ -173,7 +173,7 @@ class InputSystem {
 
     /**
      * @public
-     * @returns {boolen} - True if the left mouse button was previously pressed
+     * @returns {boolean} - True if the left mouse button was previously pressed
      */
     get wasMouseLeftPressed() {
         return this.wasMousePressed("mouseLeft");
@@ -181,7 +181,7 @@ class InputSystem {
 
     /**
      * @public
-     * @returns {boolen} - True if the middle mouse button is currently pressed
+     * @returns {boolean} - True if the middle mouse button is currently pressed
      */
     get isMouseMiddlePressed() {
         return this.isMousePressed("mouseMiddle");
@@ -189,7 +189,7 @@ class InputSystem {
 
     /**
      * @public
-     * @returns {boolen} - True if the middle mouse button was previously pressed
+     * @returns {boolean} - True if the middle mouse button was previously pressed
      */
     get wasMouseMiddlePressed() {
         return this.wasMousePressed("mouseMiddle");
@@ -197,7 +197,7 @@ class InputSystem {
 
     /**
      * @public
-     * @returns {boolen} - True if the right mouse button is currently pressed
+     * @returns {boolean} - True if the right mouse button is currently pressed
      */
     get isMouseRightPressed() {
         return this.isMousePressed("mouseRight");
@@ -205,7 +205,7 @@ class InputSystem {
 
     /**
      * @public
-     * @returns {boolen} - True if the right mouse button was previously pressed
+     * @returns {boolean} - True if the right mouse button was previously pressed
      */
     get wasMouseRightPressed() {
         return this.wasMousePressed("mouseRight");
@@ -214,24 +214,48 @@ class InputSystem {
     /**
      * @public
      * @param {string} keyName - Name of key to check
-     * @returns {boolen} - True if the keyboard key is currently pressed
+     * @returns {boolean} - True if the keyboard key is currently pressed
      */
     isKeyPressed(keyName) {
         let keyValues = this.registeredEvents.get(keyName);
         if (keyValues != undefined) {
-            return keyValues.cur;
+            return keyValues.cur == 1;
         }
     }
   
     /**
      * @public
      * @param {string} keyName - Name of key to check
-     * @returns {boolen} - True if the keyboard key was prevoiusly pressed
+     * @returns {boolean} - True if the keyboard key was prevoiusly pressed
      */
     wasKeyPressed(keyName) {
         let keyValues = this.registeredEvents.get(keyName);
         if (keyValues != undefined) {
-            return keyValues.prev;
+            return keyValues.prev == 1;
+        }
+    }
+
+    /**
+     * @public
+     * @param {string} keyName - Name of key to check
+     * @returns {boolean} - True if the keyboard key is currently pressed
+     */
+    keyJustPressed(keyName) {
+        let keyValues = this.registeredEvents.get(keyName);
+        if (keyValues != undefined) {
+            return (keyValues.cur == 1) && (keyValues.prev == 0);
+        }
+    }
+  
+    /**
+     * @public
+     * @param {string} keyName - Name of key to check
+     * @returns {boolean} - True if the keyboard key is currently pressed
+     */
+    keyJustReleased(keyName) {
+        let keyValues = this.registeredEvents.get(keyName);
+        if (keyValues != undefined) {
+            return (keyValues.prev == 1) && (keyValues.cur == 0);
         }
     }
 }
