@@ -14,4 +14,12 @@ How to install and run the demo...
 6. Build the code  
       `npx webpack --config webpack.config.js`  
 7. Run the program  
-      load index.html in a browser from the dist folder
+      load index.html in a browser from the dist folder  
+  
+The game and demo consist of the following files in src directory:  
+- game.js - The game demo related classes (the meat of the game)
+- graphics.js - Graphics class for managing rendering functionality
+- index.js - Generalized main game loop that calls the game methods
+- input.js - Input system for managing keyboard and mouse inputs
+- physics.js - Physics-related functionality such as collisions
+- primitives.js - Basic primitives used in rendering and physics
