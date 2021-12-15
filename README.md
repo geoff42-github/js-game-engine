@@ -3,9 +3,10 @@ Javascript-based game engine and demo.
 
 How to install and run the demo...  
 1. Install npm and cli from: https://nodejs.org/en/download/  
-2. Install node  
+2. Make sure you are in the project's directory and have the src and dist subdirectories
+3. Install node  
       `npm install node`  
-3. Install webpack and it's cli  
+4. Install webpack and it's cli  
       `npm install --save-dev webpack`  
       `npm install --save-dev webpack-cli`  
 5. Install JSON loader  
