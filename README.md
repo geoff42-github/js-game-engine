@@ -16,7 +16,7 @@ How to install and run the demo...
 7. Run the program  
       load index.html in a browser from the dist folder  
   
-`/src`
+`/src` Source code directory
 - graphics.js - Graphics class for managing rendering functionality
 - input.js - Input system for managing keyboard and mouse inputs
 - physics.js - Physics-related functionality such as collisions
@@ -26,7 +26,7 @@ How to install and run the demo...
 - background.js - Manages the parallax scrolling background layers
 - player.js - The player's avatar  
 
-`/dst`
+`/dst` Distributable directory (old school bin) - everything needed to run the game  
 - index.html - Very basic html used to instantiate the game demo  
 - main.js - Created only after running webpack
 - PNG files - Images used in the demo
