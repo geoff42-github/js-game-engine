@@ -1,6 +1,6 @@
 # js-game-engine
 Javascript-based game engine and demo.
-
+  
 How to install and run the demo...  
 1. Install npm and cli from: https://nodejs.org/en/download/  
 2. Make sure you are in the project's directory and have the src and dist subdirectories
@@ -25,7 +25,7 @@ How to install and run the demo...
 - game.js - The game demo related classes (the meat of the game)
 - background.js - Manages the parallax scrolling background layers
 - player.js - The player's avatar  
-
+  
 `/dst` Distributable directory (old school bin) - everything needed to run the game  
 - index.html - Very basic html used to instantiate the game demo  
 - main.js - Created only after running webpack
