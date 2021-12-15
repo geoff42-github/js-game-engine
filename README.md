@@ -17,14 +17,16 @@ How to install and run the demo...
       load index.html in a browser from the dist folder  
   
 `/src`
-- game.js - The game demo related classes (the meat of the game)
 - graphics.js - Graphics class for managing rendering functionality
-- index.js - Generalized main game loop that calls the game methods
 - input.js - Input system for managing keyboard and mouse inputs
 - physics.js - Physics-related functionality such as collisions
 - primitives.js - Basic primitives used in rendering and physics
+- index.js - Generalized main game loop that calls the game methods
+- game.js - The game demo related classes (the meat of the game)
+- background.js - Manages the parallax scrolling background layers
+- player.js - The player's avatar  
 
 `/dst`
 - index.html - Very basic html used to instantiate the game demo  
 - main.js - Created only after running webpack
-- PNG files - Moved from the images folder when running webpack
+- PNG files - Images used in the demo
