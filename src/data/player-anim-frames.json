@@ -1,0 +1,16 @@
+{
+    "PlayerAnimToward": 0,
+    "PlayerAnimLeft" : 1,
+    "PlayerAnimRight": 2,
+    "PlayerAnimAway": 3,
+    "PlayerAnimStopped": 4,
+    
+    "frames": 
+    [
+        {"x": 0, "y": 0, "w": 47.5, "h": 79, "numFrames": 12},
+        {"x": 0, "y": 79, "w": 47.5, "h": 79, "numFrames": 12},
+        {"x": 0, "y": 158, "w": 47.5, "h": 79, "numFrames": 12},
+        {"x": 0, "y": 238, "w": 47.5, "h": 79, "numFrames": 12},
+        {"x": 380, "y": 0, "w": 47.5, "h": 79, "numFrames": 1}
+    ]
+}
