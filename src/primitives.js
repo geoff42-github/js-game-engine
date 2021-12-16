@@ -1,5 +1,7 @@
 "use strict";
 
+var spriteList = [];
+
 /**
  * @class Animated Sprite
  */
@@ -35,8 +37,30 @@ export class Sprite {
         this.width = 0;
         this.height = 0;
 
-        this.img = new Image();
-        this.img.src = imageFileName;
+        this.loaded = false;
+
+        this.imgId = spriteList.length.toString();
+        spriteList.push(this);
+
+        new Promise((resolve, reject) => {
+            this.img = new Image();
+            this.img.setAttribute("ID", this.imgId);
+            this.img.onload = () => resolve(this.img);
+            this.img.onerror = reject;
+            this.img.src = imageFileName;
+        }).then(image => {
+            let index = parseInt(image.getAttribute("ID"), 10);
+            if (index >= 0 && index < spriteList.length && !spriteList[index].loaded) {
+                let s = spriteList[index];
+                if (s.width == 0) {
+                    s.width = image.width;
+                }
+                if (s.height == 0) {
+                    s.height = image.height;
+                }
+                s.loaded = true;
+            }
+        });
     }
 
     /**

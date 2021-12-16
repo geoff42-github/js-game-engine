@@ -173,7 +173,7 @@ class GraphicsEngine {
      * @param {Sprite} s - Animated Sprite to be drawn
      */
     drawSprite(s) {
-        if (s.img.complete) {
+        if (s.loaded) {
             if (s.frames == null) {
                 if (s.width == 0 || s.height == 0) {
                     this.ctx.drawImage(s.img, s.x, s.y);

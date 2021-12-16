@@ -1,7 +1,7 @@
 "use strict;"
 
 import gfx from './graphics';
-import { Rectangle, Sprite } from './primitives';
+import { Sprite } from './primitives';
 
 /**
  * @class Paralax scrolling background layer
@@ -42,15 +42,15 @@ export default class Background {
 
     update(secElapsed) {
 
-        for (let l of this.layers) {
-            l.update(this.dx, secElapsed);
+        for (let layer of this.layers) {
+            layer.update(this.dx, secElapsed);
         }
     }
 
     draw() {
 
-        for (let l of this.layers) {
-            l.draw();
+        for (let layer of this.layers) {
+            layer.draw();
         }
     }
 

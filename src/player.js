@@ -14,7 +14,9 @@ export default class Player {
 
         // TODO: Gets set by the level data since it will vary by level
         this.sprite.x = playerPos.x;
-        this.sprite.y = playerPos.y;
+        this.sprite.y = playerPos.y
+        this.sprite.width = playerData.Width;
+        this.sprite.height = playerData.Height;
 
         this.sprite.curAnim = playerData.PlayerAnimStopped;
 
