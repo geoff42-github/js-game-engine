@@ -1,6 +1,6 @@
 {
     "ImageFileName": "./images/player-small.png",
-    "Width": 47,
+    "Width": 47.5,
     "Height": 79,
     "PlayerAnimToward": 0,
     "PlayerAnimLeft" : 1,

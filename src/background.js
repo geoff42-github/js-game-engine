@@ -7,16 +7,18 @@ import { Sprite } from './primitives';
  * @class Paralax scrolling background layer
  */
  class BackLayer {
-    constructor(layerData) {
+    constructor(layerData, backWidth) {
 
-        this.sprite = new Sprite(layerData.fileName, null, 0);
+        let frame = [{"x": 0, "y": 0, "w": backWidth, "h": layerData.h, "numFrames": 1}];
+        this.sprite = new Sprite(layerData.fileName, frame, 0);
         this.sprite.x = 0;
         this.sprite.y = layerData.y;
+        this.sprite.width = backWidth;
         this.data = layerData;
     }
 
     update(dx, secElapsed) {
-        this.sprite.x += dx * secElapsed * this.data.scrollRatio;
+        this.sprite.animFrame.x -= dx * secElapsed * this.data.scrollRatio;
         this.sprite.update(secElapsed);
     }
 
@@ -33,7 +35,7 @@ export default class Background {
         this.layers = [];
 
         for (let layer of backgroundData.layers) {
-            this.layers.push(new BackLayer(layer));
+            this.layers.push(new BackLayer(layer, backgroundData.Width));
         }
 
         this.data = backgroundData;
@@ -41,7 +43,6 @@ export default class Background {
     }
 
     update(secElapsed) {
-
         for (let layer of this.layers) {
             layer.update(this.dx, secElapsed);
         }

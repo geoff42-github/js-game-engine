@@ -1,14 +1,15 @@
 {
     "PlayerPosition": {"x": 390, "y": 390},
     "WalkRate": 20,
+    "Width": 800,
     "layers":
     [
-        {"fileName": "./images/layer1-7.png", "y": 0, "scrollRatio": 0.05},
-        {"fileName": "./images/layer1-6.png", "y": 0, "scrollRatio": 0.2},
-        {"fileName": "./images/layer1-5.png", "y": 0, "scrollRatio": 0.4},
-        {"fileName": "./images/layer1-4.png", "y": 0, "scrollRatio": 0.5},
-        {"fileName": "./images/layer1-3.png", "y": 0, "scrollRatio": 0.6},
-        {"fileName": "./images/layer1-2.png", "y": 260, "scrollRatio": 0.8},
-        {"fileName": "./images/layer1-1.png", "y": 454, "scrollRatio": 1.0}
+        {"fileName": "./images/layer1-7.png", "y": 0, "h": 773, "scrollRatio": 0.05},
+        {"fileName": "./images/layer1-6.png", "y": 0, "h": 773, "scrollRatio": 0.2},
+        {"fileName": "./images/layer1-5.png", "y": 0, "h": 773, "scrollRatio": 0.4},
+        {"fileName": "./images/layer1-4.png", "y": 0, "h": 773, "scrollRatio": 0.5},
+        {"fileName": "./images/layer1-3.png", "y": 0, "h": 773, "scrollRatio": 0.6},
+        {"fileName": "./images/layer1-2.png", "y": 260, "h": 197, "scrollRatio": 0.8},
+        {"fileName": "./images/layer1-1.png", "y": 454, "h": 146, "scrollRatio": 1.0}
     ]
 }
