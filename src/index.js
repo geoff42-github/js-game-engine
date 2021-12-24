@@ -1,6 +1,6 @@
 "use strict";
 
-import game from "./game.js";
+import game from "./game/game.js";
 
 var elapsedMs = 0.0;
 var lastFrameMs = 0.0;
